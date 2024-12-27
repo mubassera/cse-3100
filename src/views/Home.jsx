@@ -1,32 +1,21 @@
 import { useEffect, useState } from 'react';
+import Abyssinian from '../assets/Abyssinian.jpeg';
+import Bengal from '../assets/Bengal.jpeg';
+import Birman from '../assets/Birman.jpeg';
+import Persian from '../assets/Persian.jpeg';
+import Siamese from '../assets/Siamese.jpeg';
+import Sphynx from '../assets/Sphynxcat.jpg';
 
 const featuredCats = [
-  { name: 'Whiskers', age: '2' },
-  { name: 'Mittens', age: '2' },
-  { name: 'Shadow', age: '1' },
+  { name: 'Whiskers', age: '2', breed: 'Sphynx', image: Sphynx },
+    { name: 'Mittens', age: '2', breed: 'Persian', image: Persian },
+    { name: 'Shadow', age: '1', breed: 'Siamese', image: Siamese },
 ];
 
 export default function Home() {
-  const [cats, setCats] = useState([]);
+  const [cats, setCats] = useState(featuredCats);
 
-  useEffect(() => {
-    // Fetch cat images from an API endpoint and assign it to the featuredCats list
-    const fetchCatImages = async () => {
-      try {
-        const responses = await Promise.all(featuredCats.map(() => fetch('https://api.thecatapi.com/v1/images/search').then((res) => res.json())));
-        const catsWithImages = featuredCats.map((cat, index) => ({
-          ...cat,
-          image: responses[index][0].url,
-        }));
-
-        setCats(catsWithImages);
-      } catch (error) {
-        console.error('Error fetching cat images:', error);
-      }
-    };
-
-    fetchCatImages();
-  }, []);
+ 
 
   return (
     <>
@@ -45,10 +34,12 @@ export default function Home() {
           {cats.map((cat, i) => (
             <div key={i} className="col-md-4">
               <div className="cat-card">
-                <img src={cat.image} alt={cat.name} className="img-fluid mb-2" style={{ borderRadius: '8px', height: '200px', objectFit: 'cover' }} />
-                <div className="cat-info">
+                <img src={cat.image} alt={cat.name} className="img-fluid " style={{ borderRadius: '8px', height: '200px', objectFit: 'cover' }} />
+                <div className="cat-info"> 
                   <h3 className="h5 mb-1">{cat.name}</h3>
+                   <p className="mb-0">Breed: {cat.breed}</p> 
                   <p className="mb-0">Age: {cat.age}</p>
+                  
                 </div>
               </div>
             </div>

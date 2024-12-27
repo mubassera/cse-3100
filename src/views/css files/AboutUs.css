@@ -1,0 +1,34 @@
+.aboutus {
+    text-align: left;
+    margin-top: 4px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+
+
+}
+
+#member-container {
+    display: flex;
+
+}
+
+.member-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.member-info {
+    margin-top: 10px;
+}
+
+
+
+.member-info p {
+   
+    color: #888;
+}
