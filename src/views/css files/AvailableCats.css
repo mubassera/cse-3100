@@ -1,0 +1,8 @@
+.filters{
+    margin-top: 3px;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    
+}
