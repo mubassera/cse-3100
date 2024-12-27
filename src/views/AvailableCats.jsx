@@ -5,10 +5,10 @@ import Bengal from '../assets/Bengal.jpeg';
 import Birman from '../assets/Birman.jpeg';
 import Persian from '../assets/Persian.jpeg';
 import Siamese from '../assets/Siamese.jpeg';
-import Sphynx from '../assets/Sphynx.jpeg';
+import Sphynx from '../assets/Sphynxcat.jpg';
 
 const availableCats = [
-  //added breed and cat images
+ 
  { name: 'Whiskers', age: '2', breed: 'Sphynx', image: Sphynx },
   { name: 'Mittens', age: '2', breed: 'Persian', image: Persian },
   { name: 'Shadow', age: '1', breed: 'Siamese', image: Siamese },
@@ -19,7 +19,6 @@ const availableCats = [
 
 export default function AvailableCats() {
   const [cats, setCats] = useState(availableCats);
-  //for breed filter and textbox
   const [searchText, setSearchText] = useState('');
   const [selectedBreed, setSelectedBreed] = useState('');
 
@@ -77,7 +76,7 @@ export default function AvailableCats() {
                 <img
                   src={cat.image}
                   alt={cat.name}
-                  className="img-fluid mb-2"
+                  className="img-fluid "
                   style={{
                     borderRadius: '8px',
                     height: '200px',
@@ -93,7 +92,6 @@ export default function AvailableCats() {
             </div>
           ))
         ) : (
-          // Display message when no cats are available
           <div className="text-center">
             <p>Not Available</p>
           </div>

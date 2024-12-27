@@ -1,5 +1,6 @@
 import { Link, Outlet } from 'react-router-dom';
 
+
 const BaseLayout = () => {
   return (
     <div className="layout">
@@ -18,6 +19,9 @@ const BaseLayout = () => {
               </Link>
               <Link className="nav-link" to="/contact-us">
                 Contact Us
+              </Link>
+                <Link className="nav-link" to="/about-us">
+                About Us
               </Link>
             </li>
           </ul>

@@ -5,12 +5,12 @@
 }
 
 header {
-  padding: 1.5em;
+  padding: 3em;
 }
 
 main {
   flex: 1;
-  padding: 1.5em;
+  padding: 1em;
 }
 footer {
   padding: 1em;
@@ -20,16 +20,43 @@ footer {
 .cat-card {
   border: 1px solid #ddd;
   text-align: center;
-  height: 325px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 1em;
-
-
 }
+
+
 
 .cat-info {
   background: #f8f9fa;
   border-radius: 4px;
+  padding-top: 15px;
+  height: 120px;
 }
+
+
+
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+nav .nav-item {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+

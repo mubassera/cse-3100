@@ -23,6 +23,12 @@ export const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert('Form Submitted!');
+
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+    });
   };
    
   return (
@@ -62,7 +68,6 @@ export const ContactUs = () => {
             name='phone'
             value={formData.phone}
             onChange={handleInputChange}
-            
             required
         />
         </div>

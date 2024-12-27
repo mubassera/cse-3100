@@ -4,7 +4,7 @@ import Bengal from '../assets/Bengal.jpeg';
 import Birman from '../assets/Birman.jpeg';
 import Persian from '../assets/Persian.jpeg';
 import Siamese from '../assets/Siamese.jpeg';
-import Sphynx from '../assets/Sphynx.jpeg';
+import Sphynx from '../assets/Sphynxcat.jpg';
 
 const featuredCats = [
   { name: 'Whiskers', age: '2', breed: 'Sphynx', image: Sphynx },
@@ -34,7 +34,7 @@ export default function Home() {
           {cats.map((cat, i) => (
             <div key={i} className="col-md-4">
               <div className="cat-card">
-                <img src={cat.image} alt={cat.name} className="img-fluid mb-2" style={{ borderRadius: '8px', height: '200px', objectFit: 'cover' }} />
+                <img src={cat.image} alt={cat.name} className="img-fluid " style={{ borderRadius: '8px', height: '200px', objectFit: 'cover' }} />
                 <div className="cat-info"> 
                   <h3 className="h5 mb-1">{cat.name}</h3>
                    <p className="mb-0">Breed: {cat.breed}</p> 
